@@ -12,6 +12,7 @@ public class AddForm extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter writer = resp.getWriter();
+
         writer.println("<html>");
         writer.println("<head>");
         writer.println("<title>Phép tính với 2 số</title></head>");
@@ -60,6 +61,7 @@ public class AddForm extends HttpServlet {
         {
             if(Integer.parseInt(req.getParameter("num2"))==0)
             {
+                writer.println("Phép chia không thể thực hiện!");
                 writer.println("Phép chia không thể thực hiện!");
             }
             result = Integer.parseInt(req.getParameter("num1")) / Integer.parseInt(req.getParameter("num2"));

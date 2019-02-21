@@ -62,7 +62,6 @@ public class AddForm extends HttpServlet {
             if(Integer.parseInt(req.getParameter("num2"))==0)
             {
                 writer.println("Phép chia không thể thực hiện!");
-                writer.println("Phép chia không thể thực hiện!");
             }
             result = Integer.parseInt(req.getParameter("num1")) / Integer.parseInt(req.getParameter("num2"));
         }
